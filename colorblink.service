@@ -1,0 +1,11 @@
+[Unit]
+Description=Colorblink
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/sel/colorblink.py
+ExecStop=/usr/bin/python3 /home/sel/buzzlightyear.py
+User=sel
+
+[Install]
+WantedBy=multi-user.target
