@@ -1,0 +1,23 @@
+commit 831ca890151d8d5b69b725207f7b92b2a26e57cb
+Author: fujiska <luroysen@gmail.com>
+Date:   Mon Nov 25 17:54:01 2024 -0300
+
+    Git ignore
+
+commit 49c28b34b0ab91daf0b3a6180bae9580942449b0
+Author: Luana Fujikawa <113643408+fujiska@users.noreply.github.com>
+Date:   Mon Nov 25 17:47:56 2024 -0300
+
+    Roteiro da prática
+
+commit ef92d18b3d4e1955d52e1339d7395adc14ab8425
+Author: fujiska <luroysen@gmail.com>
+Date:   Mon Nov 25 17:34:05 2024 -0300
+
+    Atualização
+
+commit f6ccc0c53f71e1fa9359b5a94e78b56592b0c6f8
+Author: Luana Fujikawa <113643408+fujiska@users.noreply.github.com>
+Date:   Mon Nov 25 17:24:36 2024 -0300
+
+    Initial commit
