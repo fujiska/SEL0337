@@ -1,11 +1,16 @@
-[Unit]
-Description=Colorblink
-After=multi-user.target
+[Unit] 
+# Seção que descreve o serviço e suas dependências gerais
+Description=Colorblink # Descrição do serviço. Esse texto aparece nos logs do systemd para identificação
+After=multi-user.target # Define que o serviço será iniciado somente após o estágio "multi-user.target", que representa a inicialização de vários serviços essenciais do sistema.
 
 [Service]
-ExecStart=/usr/bin/python3 /home/sel/colorblink.py
-ExecStop=/usr/bin/python3 /home/sel/buzzlightyear.py
-User=sel
+# Seção que define como o serviço será executado
+ExecStart=/usr/bin/python3 /home/sel/colorblink.py # Especifica o comando para iniciar o serviço. Aqui, o serviço executará o script Python "colorblink.py" utilizando o interpretador "python3"
+ExecStop=/usr/bin/python3 /home/sel/buzzlightyear.py # Especifica o comando para parar o serviço. Ao interromper o serviço, o script "buzzlightyear.py" será executado
+
+User=sel # Define o usuário "sel" como responsável por executar o serviço
+# É importante garantir que esse usuário tenha permissões adequadas para acessar os scripts
 
 [Install]
-WantedBy=multi-user.target
+# Seção que define como o serviço será integrado no systemd
+WantedBy=multi-user.target # Define que o serviço será associado ao "multi-user.target", garantindo sua execução no estágio correspondente do boot
