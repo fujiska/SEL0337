@@ -1,7 +1,7 @@
 [Unit] 
 # Seção que descreve o serviço e suas dependências gerais
 Description=Colorblink # Descrição do serviço. Esse texto aparece nos logs do systemd para identificação
-After=multi-user.target # Define que o serviço será iniciado somente após o estágio "multi-user.target", que representa a inicialização de vários serviços essenciais do sistema.
+After=multi-user.target # Define que o serviço será iniciado somente após o estágio "multi-user.target", que representa a inicialização de vários serviços essenciais do sistema
 
 [Service]
 # Seção que define como o serviço será executado
