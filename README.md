@@ -9,8 +9,8 @@ A configuração envolve a criação de uma **unidade de serviço personalizada*
 O `systemd` é o sistema de inicialização moderno utilizado no Linux, responsável por gerenciar a inicialização de serviços e processos. A prática envolve a criação de um arquivo de configuração de serviço (`colorblink.service`) que especifica as seguintes ações:
 
 1. **Execução do Script Python:**
-   - `ExecStart` define que, ao iniciar o serviço, o script `colorblink.py` será executado usando o interpretador Python 3.
-   - `ExecStop` define que, ao parar o serviço, o script `buzzlightyear.py` será executado, ativando o buzzer.
+   - `ExecStart` define que, ao iniciar o serviço, o script [```colorblink.py```](https://github.com/fujiska/SEL0337/blob/main/colorblink.py) será executado usando o interpretador Python 3.
+   - `ExecStop` define que, ao parar o serviço, o script [```buzzlightyear.py```](https://github.com/fujiska/SEL0337/blob/main/buzzlightyear.py) será executado, ativando o buzzer.
 
 2. **Configuração do Sistema:**
    - O serviço é configurado para ser iniciado após o estágio `multi-user.target`, ou seja, após a inicialização de serviços essenciais.
