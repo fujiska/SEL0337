@@ -15,13 +15,19 @@ O `systemd` é o sistema de inicialização moderno utilizado no Linux, respons�
 2. **Configuração do Sistema:**
    - O serviço é configurado para ser iniciado após o estágio `multi-user.target`, ou seja, após a inicialização de serviços essenciais.
    - A unidade de serviço é associada ao **multi-user.target** no momento da instalação, permitindo que o serviço seja iniciado automaticamente durante o boot.
+  
+Primeiramente, para que o serviço fosse reconhecido e executado corretamente durante a inicialização do sistema, o arquivo de configuração da unidade de serviço [```colorblink.service```](https://github.com/fujiska/SEL0337/blob/main/colorblink.service) foi colocado no diretório adequado do systemd com o comando `sudo cp colorblink.service /lib/systemd/system/`. Após isso, o serviço pôde ser testado com o comando `sudo systemctl start colorblink`, o qual iniciou o script configurado. Para interromper o serviço, utilizou-se o comando `sudo systemctl stop colorblink`. Além disso, ao executar `sudo systemctl enable colorblink`, o serviço foi configurado para ser iniciado automaticamente a cada reinicialização do sistema. Assim, ao reiniciar a Raspberry Pi, o serviço foi executado automaticamente.
+
+Caso fosse necessário corrigir algum erro, utilizou-se o comando `sudo systemctl status colorblink.service`, que forneceu informações detalhadas sobre o estado do serviço e eventuais mensagens de erro. Para desabilitar o serviço durante o boot, usou-se o comando `sudo systemctl disable colorblink`, o que impediu que ele fosse iniciado nas reinicializações seguintes. Caso alterações fossem feitas no arquivo do serviço, foi necessário recarregar as configurações com `sudo systemctl daemon-reload` para que as modificações fossem aplicadas.
 
 O processo facilita a execução de aplicações em sistemas embarcados, garantindo que elas sejam iniciadas automaticamente após o boot, sem a necessidade de interação manual com o sistema operacional.
 
 Como resultado do projeto, observa-se a imagem e o vídeo abaixo, que representam o funcionamento do serviço de inicialização acima.
 
 <img src="midia/20241125_170002.jpg" width="432"/> 
-![](https://github.com/fujiska/SEL0337/raw/refs/heads/main/midia/20241125_172305%20(online-video-cutter.com).mov)
 
+Vídeo:
+Github - https://github.com/fujiska/SEL0337/blob/main/midia/20241125_172305.mp4
+Drive - https://drive.google.com/file/d/1ty-9zj_Xuy1Z0Xztwy3lXKTORBcSBvCc/view?usp=drive_link
 
 O histórico de commits git realizados no terminal durante a aula está presente no arquivo [```historico_git.txt```](https://github.com/fujiska/SEL0337/blob/main/historico_git.txt).
