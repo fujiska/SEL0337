@@ -20,8 +20,6 @@ Primeiramente, para que o serviço fosse reconhecido e executado corretamente du
 
 Caso fosse necessário corrigir algum erro, utilizou-se o comando `sudo systemctl status colorblink.service`, que forneceu informações detalhadas sobre o estado do serviço e eventuais mensagens de erro. Para desabilitar o serviço durante o boot, usou-se o comando `sudo systemctl disable colorblink`, o que impediu que ele fosse iniciado nas reinicializações seguintes. Caso alterações fossem feitas no arquivo do serviço, foi necessário recarregar as configurações com `sudo systemctl daemon-reload` para que as modificações fossem aplicadas.
 
-O processo facilita a execução de aplicações em sistemas embarcados, garantindo que elas sejam iniciadas automaticamente após o boot, sem a necessidade de interação manual com o sistema operacional.
-
 Como resultado do projeto, observa-se a imagem e o vídeo abaixo, que representam o funcionamento do serviço de inicialização acima.
 
 <img src="midia/20241125_170002.jpg" width="432"/> 
